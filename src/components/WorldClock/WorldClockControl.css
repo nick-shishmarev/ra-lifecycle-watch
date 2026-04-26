@@ -1,0 +1,26 @@
+.clock_container {
+  position: relative;
+  padding: 30px;
+  border: 1px solid #888888;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.clocks-box {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.switch_clock {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.switch_img {
+  width: 2em;
+  height: 2em;
+}

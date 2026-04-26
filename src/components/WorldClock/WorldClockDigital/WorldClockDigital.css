@@ -1,0 +1,40 @@
+.clock_box {
+  position: relative;
+  width:200px;
+  height: 100px;
+  border: 1px solid #606060;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.time_str {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.close_btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  font-size: 1em;
+}
