@@ -1,5 +1,5 @@
 import './WorldClockControl.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { WorldClockDigital } from './WorldClockDigital/WorldClockDigital';
 import { WorldClockForm } from './WorldClockForm/WorldClockForm';
 import { WorldClockAnalog } from './WorldClockAnalog/WorldClockAnalog';
@@ -26,9 +26,15 @@ export const WorldClockControl = () => {
     {id: '2', city: 'Москва', timezone: 3},
   ]);
 
-  setInterval((() => {
-    setNow(timeUtc);
-  }), 1000);
+  useEffect((() => {
+    const intervalId = setInterval((() => {
+      setNow(timeUtc);
+    }), 1000);
+
+    return () => {
+      clearInterval(intervalId);
+    }
+  }), []) 
 
   return (
     <div className='clock_container'>
